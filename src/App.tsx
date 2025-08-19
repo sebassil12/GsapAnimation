@@ -1,16 +1,15 @@
 import './App.css'
-import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
+import { ScrollTrigger, SplitText } from 'gsap/all';
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function App() {
-
-const boxRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    gsap.to(boxRef.current, {duration: 2, x: 100, rotation: 360});
-  }, []);
-
-  return <div ref={boxRef} className="box">Animated Box</div>;
+  return (
+    <div className='flex-center h-[100vh]'>
+      <h1 className='text-3xl text-indigo-300'>Hello, GSAP!</h1>
+    </div>
+  )
 }
 
 export default App
