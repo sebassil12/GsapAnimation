@@ -11,6 +11,7 @@ function App() {
     <main className="App">
       <Navbar />
       <Hero />
+      <div className='h-dvh bg-black' />
     </main>
   )
 }
